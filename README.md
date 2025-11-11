@@ -1,2 +1,61 @@
-# DataCamp-Data-Scientist-Certification
-Capstone project for the DataCamp Data Scientist Certification. This practical exam used a recipe site traffic dataset  to predict popular recipes. Tasks included data cleaning, EDA, modeling (to hit an 80% prediction target ), and creating both technical and non-technical presentations.
+# DataCamp Data Scientist Certification - Capstone Project
+
+This repository contains my final capstone project submission for the **DataCamp Data Scientist Professional Certification**. This exam is a rigorous, practical assessment designed to test the complete end-to-end data science workflow, from data validation and exploratory analysis to predictive modeling and stakeholder communication.
+
+## 🚀 Project Overview & Business Problem
+
+[cite_start]This project is based on a real-world business case for "Tasty Bytes," a recipe website [cite: 46-52]. [cite_start]The Product Manager is responsible for choosing a recipe to feature on the homepage each day and has noticed that a popular recipe can increase site-wide traffic by as much as 40% [cite: 34-35].
+
+[cite_start]The current selection process is manual ("my favorite recipe") and unreliable [cite: 34-36].
+
+**The Task:** My task was to act as a data scientist, analyze the provided data, and build a predictive model.
+
+[cite_start]**The Business Goal:** The model must "Correctly predict high traffic recipes 80% of the time"[cite: 40].
+
+## 📋 The Deliverables
+
+As per the certification requirements, the practical exam is split into two key deliverables, each tailored to a specific audience:
+
+1.  **Technical Report:** A detailed written report for a Data Science Manager. This deliverable focuses on the "how" and "why" of the analytical process, including data validation steps, model selection, and evaluation.
+2.  **Non-Technical Presentation:** A 10-minute (8-10 slide) presentation for a non-technical Product Manager. This focuses on the "what" (the results) and the "so what" (the business recommendations), translating complex findings into actionable insights.
+
+## 📊 My Analytical Approach
+
+1.  [cite_start]**Data Validation & Cleaning:** The provided `recipe_site_traffic_2212.csv` data [cite: 120-122] required significant cleaning. This included:
+    * Imputing `NA` values in the `high_traffic` target variable to create a binary (0/1) target.
+    * Parsing non-numeric string values (e.g., "4 as a snack") in the `servings` column.
+    * Consolidating inconsistent `category` values (e.g., "Chicken Breast" vs. "Chicken \nBreast").
+    * Preparing numeric columns (`calories`, `protein`, etc.) with `NA` values for imputation within a modeling pipeline.
+
+2.  **Exploratory Data Analysis (EDA):** I analyzed the cleaned data to find patterns. The most significant finding was that `category` (e.g., 'Pork', 'Vegetable') was a very strong predictor, while individual nutritional features showed little-to-no simple correlation with high traffic.
+
+3.  **Predictive Modeling:** I defined the business problem as a **binary classification** problem. The 80% target was interpreted as the **Recall** of the "High Traffic" (1) class.
+    * **Baseline Model:** `LogisticRegression` was used as a simple, interpretable baseline.
+    * **Comparison Model:** `RandomForestClassifier` was chosen for its ability to handle non-linear patterns, the dataset's imbalance, and its high performance.
+
+## 🏆 Key Results & Recommendations
+
+The final Random Forest model significantly outperformed the baseline and successfully met the business goal.
+
+| Metric | Baseline (Logistic Regression) | Final Model (Random Forest) | Business Target |
+| :--- | :---: | :---: | :---: |
+| **Recall (High Traffic)** | 77% | **84%** | **80%** |
+| Precision (High Traffic) | 72% | **81%** | N/A |
+| Overall Accuracy | 71% | **80%** | N/A |
+
+The final recommendation was to **implement the Random Forest model** to replace the manual selection process. This would provide a statistically reliable method to achieve the 80% prediction target and help capture the 40% lift in site traffic.
+
+## 📁 Repository Contents
+
+* `Technical_Report.pdf`: The full technical report for the "Data Science Manager."
+* `Stakeholder_Presentation.pdf`: The non-technical slide deck for the "Product Manager."
+* `[Your_Notebook_Name].ipynb`: The Jupyter Notebook containing all Python code for data cleaning, EDA, and modeling.
+* [cite_start]`recipe_site_traffic_2212.csv`: The raw data used for the project [cite: 120-122].
+* `README.md`: This file.
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **Pandas** (for data manipulation and cleaning)
+* **Scikit-learn** (for preprocessing, modeling, and evaluation)
+* **Matplotlib & Seaborn** (for visualization)
