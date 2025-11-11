@@ -1,16 +1,16 @@
-# DataCamp Data Scientist Certification - Capstone Project
+# DataCamp Data Scientist Certification - Practical Exam Capstone Project
 
 This repository contains my final capstone project submission for the **DataCamp Data Scientist Professional Certification**. This exam is a rigorous, practical assessment designed to test the complete end-to-end data science workflow, from data validation and exploratory analysis to predictive modeling and stakeholder communication.
 
 ## 🚀 Project Overview & Business Problem
 
-[cite_start]This project is based on a real-world business case for "Tasty Bytes," a recipe website [cite: 46-52]. [cite_start]The Product Manager is responsible for choosing a recipe to feature on the homepage each day and has noticed that a popular recipe can increase site-wide traffic by as much as 40% [cite: 34-35].
+This project is based on a real-world business case for "Tasty Bytes," a recipe website. The Product Manager is responsible for choosing a recipe to feature on the homepage each day and has noticed that a popular recipe can increase site-wide traffic by as much as 40%.
 
-[cite_start]The current selection process is manual ("my favorite recipe") and unreliable [cite: 34-36].
+The current selection process is manual ("my favorite recipe") and unreliable.
 
 **The Task:** My task was to act as a data scientist, analyze the provided data, and build a predictive model.
 
-[cite_start]**The Business Goal:** The model must "Correctly predict high traffic recipes 80% of the time"[cite: 40].
+**The Business Goal:** The model must "Correctly predict high traffic recipes 80% of the time".
 
 ## 📋 The Deliverables
 
@@ -21,7 +21,7 @@ As per the certification requirements, the practical exam is split into two key 
 
 ## 📊 My Analytical Approach
 
-1.  [cite_start]**Data Validation & Cleaning:** The provided `recipe_site_traffic_2212.csv` data [cite: 120-122] required significant cleaning. This included:
+1.  **Data Validation & Cleaning:** The provided `recipe_site_traffic_2212.csv` data required significant cleaning. This included:
     * Imputing `NA` values in the `high_traffic` target variable to create a binary (0/1) target.
     * Parsing non-numeric string values (e.g., "4 as a snack") in the `servings` column.
     * Consolidating inconsistent `category` values (e.g., "Chicken Breast" vs. "Chicken \nBreast").
@@ -50,7 +50,7 @@ The final recommendation was to **implement the Random Forest model** to replace
 * `Technical_Report.pdf`: The full technical report for the "Data Science Manager."
 * `Stakeholder_Presentation.pdf`: The non-technical slide deck for the "Product Manager."
 * `[Your_Notebook_Name].ipynb`: The Jupyter Notebook containing all Python code for data cleaning, EDA, and modeling.
-* [cite_start]`recipe_site_traffic_2212.csv`: The raw data used for the project [cite: 120-122].
+* `recipe_site_traffic_2212.csv`: The raw data used for the project.
 * `README.md`: This file.
 
 ## 🛠️ Technologies Used
